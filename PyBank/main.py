@@ -60,17 +60,6 @@ def PyBank(usr_filename):
     printrow7 = "Greatest Increase in Revenue:  " + str(maxRevenueDate) + " " + "($" + str(maxRevenue) + ")"
     printrow8 = "Greatest Decrease in Revenue:  " + str(minRevenueDate) + " " + "($" + str(minRevenue) + ")"
 
-
-    # print financial analysis to the terminal
-    #print("-----------------------------------------")
-    #print("Financial Analysis Using DataFile: " + usr_filename)
-    #print("-----------------------------------------")
-    #print("Total Months:  " + str(monthCount))
-    #print("Total Revenue:  $" + str(revenueTotal))
-    #print("Average Revenue Change:  $" + str(averageChange))
-    #print("Greatest Increase in Revenue:  " + str(maxRevenueDate) + " " + "($" + str(maxRevenue) + ")")
-    #print("Greatest Decrease in Revenue:  " + str(minRevenueDate) + " " + "($" + str(minRevenue) + ")")
-
     print(printrow1)
     print(printrow2)
     print(printrow3)
@@ -87,9 +76,6 @@ def PyBank(usr_filename):
     outputPath = os.path.join('../Resources', outputFilename)
 
     #  Open the output file
-    #with open(output_file, "w", newline="") as txtfile:
-    #    writer = csv.writer(txtfile)
-
     txtFile = open(outputPath, "w")
         
     # Write the rows
@@ -103,7 +89,7 @@ def PyBank(usr_filename):
     txtFile.write(printrow8)
  
     # let the user know where the outout file is located
-    print("The Financial Analysis as been exported to text file: " + outputFilename)
+    print("The Financial Analysis has been exported to text file: " + outputFilename)
 
 # call the PyBank function to run data files
 PyBank("budget_data_2.csv")
